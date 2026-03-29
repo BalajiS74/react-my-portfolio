@@ -1,0 +1,184 @@
+/*  */
+
+.hero-title {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  margin-bottom: 12px;
+  color: #111827;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.accent {
+  color: #0d9488;
+  font-weight: 700;
+}
+
+.hero-sublead {
+  color: #334155;
+}
+
+.project_container {
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.15);
+}
+
+.project-card .card-img-top,
+.responsive-image {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    max-height: 220px;
+  }
+}
+
+.project-card .card-body {
+  padding: 1rem;
+}
+
+.project-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.project-card .card-text {
+  color: #475569;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.hero-sublead {
+  font-size: larger;
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.btn-contact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+  transition: all 160ms ease;
+}
+
+.skill-chips {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.skill-chips li {
+  background: rgba(37, 217, 103, 0.06);
+  color: #14532d;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.profile-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 45%; */
+  /* box-shadow: 0 14px 40px rgba(2, 6, 23, 0.12); */
+  /* border: 2px solid transparent; */
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .profile-wrap {
+    width: 220px;
+    height: 220px;
+  }
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Skills divider and list */
+.divider {
+  padding: 2.25rem 1rem;
+  border-top: 1px solid rgba(15, 23, 36, 0.06);
+  /* margin: 2rem 0; */
+}
+.divider h2 {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f1724;
+}
+.divider-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem 2.5rem;
+  align-items: start;
+}
+.divider-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: #334155;
+  font-weight: 600;
+  margin: 6px 0;
+  font-size: larger;
+}
+.divider-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #25d967;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 576px) {
+  .divider-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .divider h2 {
+    text-align: center;
+  }
+}

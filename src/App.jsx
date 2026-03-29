@@ -1,0 +1,25 @@
+import "./App.css";
+import { Route, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import RootLayout from './layouts/RootLayout'
+import Home from './pages/Home'
+import AllBlogs from './pages/AllBlogs'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import NotFound from "./pages/NotFound";
+function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />}> 
+        <Route index element={<Home />} />
+        <Route path="blogs" element={<AllBlogs />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    )
+  )
+  return <RouterProvider router={router}></RouterProvider>
+}
+
+export default App;
