@@ -99,4 +99,28 @@ a {
   animation: fadeInUp 0.55s ease-out forwards;
 }
 
+/* Shared in-view reveal for custom hook components */
+.reveal,
+.reveal-card,
+.skill-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+}
+
+.reveal.in-view,
+.reveal-card.in-view,
+.skill-section.in-view,
+.navbar-container.in-view,
+.animated-section.in-view,
+.animated-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-card.in-view,
+.animated-card.in-view {
+  transform: translateY(0) scale(1);
+}
+
 

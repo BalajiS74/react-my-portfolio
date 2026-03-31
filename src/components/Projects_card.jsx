@@ -1,4 +1,5 @@
 import React from "react";
+import { useInView } from "../hooks/useInView";
 import { GlobalBtn } from "./GlobalBtn";
 // Import other project images as needed
 import guessgame from "../assets/projects-image/guessgame.png";
@@ -67,9 +68,14 @@ const projectsData = [
   // Add more projects here
 ];
 export const ProjectsCard = () => {
+  const { ref, inView } = useInView();
+
   return (
-    <div className="container project_container py-5 animated-section">
-      <h2 className="text-center mb-5 fw-bold">Projects</h2>
+    <div
+      ref={ref}
+      className={`container project_container py-5 reveal ${inView ? "in-view" : ""}`}
+    >
+      <h2 className="text-center mb-5 fw-bold">Show cases</h2>
       <div className="row g-4">
         {projectsData.map((project, index) => (
           <div

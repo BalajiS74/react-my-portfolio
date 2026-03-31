@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, RouterProvider } from "react-router-dom";
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
 } from "react-router-dom";
 import RootLayout from './layouts/RootLayout'
@@ -10,7 +10,7 @@ import AllBlogs from './pages/AllBlogs'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import NotFound from "./pages/NotFound";
 function App() {
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}> 
         <Route index element={<Home />} />

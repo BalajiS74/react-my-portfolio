@@ -18,6 +18,7 @@ export const blogPosts = [
     title: "innover 2k25 project contest",
     description:
       "my second achivement in my college i have won the first prize in the innover 2k25 project contest conducted by scad engineering college in the year 2025",
+    date: "april 15, 2025",
     image: innover2k25,
     link: "https://yourblog.com/bootstrap-responsive",
   },
@@ -26,7 +27,7 @@ export const blogPosts = [
     title: "complete 1month python for ai internship",
     description:
       " i have completed a 1 month internship in python for ai at infosmite pvt ltd in the year 2025",
-    date: "January 10, june 2025",
+    date: "January 10,  2025",
     image: infosmite,
     link: "https://yourblog.com/js-performance",
   },

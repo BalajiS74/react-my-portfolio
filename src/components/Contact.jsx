@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useInView } from "../hooks/useInView";
 import { GlobalBtn } from "./GlobalBtn";
 export const Contact = () => {
+  const { ref, inView } = useInView();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,12 +27,15 @@ export const Contact = () => {
   };
 
   return (
-    <div className="container py-5 animated-section">
-      <h2 className="text-center mb-5 fw-bold">Get in Touch</h2>
-      <div className="row g-5">
-        {/* Contact Form */}
-        <div className="col-lg-12">
-          {submitted && (
+    <section ref={ref} className={`contact-section py-5 reveal ${inView ? "in-view" : ""}`}>
+      <div className="container">
+        <div className="contact-card p-4">
+          <div className="text-center mb-4">
+            <h2 className="fw-bold">Get in Touch</h2>
+            <p className="text-muted mb-0">Send me a message and I'll get back within 24 hours.</p>
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-lg-8">          {submitted && (
             <div
               className="alert alert-success alert-dismissible fade show"
               role="alert"
@@ -46,7 +51,7 @@ export const Contact = () => {
           )}
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
-              <label htmlFor="name" className="form-label">
+              <label htmlFor="name" className="form-label fw-semibold">
                 Name
               </label>
               <input
@@ -60,7 +65,7 @@ export const Contact = () => {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="email" className="form-label">
+              <label htmlFor="email" className="form-label fw-semibold">
                 Email address
               </label>
               <input
@@ -74,7 +79,7 @@ export const Contact = () => {
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="message" className="form-label">
+              <label htmlFor="message" className="form-label fw-semibold">
                 Message
               </label>
               <textarea
@@ -87,10 +92,18 @@ export const Contact = () => {
                 required
               ></textarea>
             </div>
-            <GlobalBtn name="Send Message" type="submit" />
+            <div className="text-center">
+              <GlobalBtn
+                name="Send Message"
+                type="submit"
+                className="btn-primary"
+              />
+            </div>
           </form>
         </div>
       </div>
     </div>
+  </div>
+</section>
   );
 };

@@ -1,5 +1,6 @@
 import { GlobalBtn } from "./GlobalBtn";
 import { IconWrapper } from "./IconWrapper";
+import { useInView } from "../hooks/useInView";
 import { useState } from "react";
 const name = "<Balaji🐳/>";
 
@@ -47,8 +48,11 @@ const Navlink = (href, navname) => {
 };
 
 function Navbar() {
+  const { ref, inView } = useInView();
   return (
-    <div className="container-fluid navbar-container">
+    <div
+      ref={ref}
+      className={`container-fluid navbar-container reveal ${inView ? "in-view" : ""}`}>
       <div className="row align-items-center py-md-3 pt-3">
         {/* Name */}
         <div className="col-6 col-md-3 ps-md-4 " style={{ letterSpacing: 3 }}>

@@ -1,10 +1,13 @@
 import React from "react";
+import { useInView } from "../hooks/useInView";
 import { blogPosts } from "../data/blogData";
 import { GlobalBtn } from "../components/GlobalBtn";
 
 const AllBlogs = () => {
+  const { ref, inView } = useInView();
+
   return (
-    <div className="container py-5 animated-section">
+    <div ref={ref} className={`container py-5 reveal ${inView ? "in-view" : ""}`}>
       <h2 className="text-center mb-5 fw-bold">All Blog Posts</h2>
       <div className="row g-4">
         {blogPosts.map((post) => (
@@ -25,7 +28,7 @@ const AllBlogs = () => {
                     href={post.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    name="Read Original"
+                    name="Read more"
                     className="btn btn-outline-primary btn-sm"
                   />
                 </div>

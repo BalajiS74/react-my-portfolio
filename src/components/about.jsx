@@ -1,42 +1,41 @@
 import React from "react";
-// Import your profile image (replace with your actual image)
-import profileImg from "../assets/gmailprofile.jpg";
+import { useInView } from "../hooks/useInView";
 
 export const About = () => {
-  return (
-    <div className="container py-5 animated-section">
-      <h2 className="text-center mb-5 fw-bold">About Me</h2>
-      <div className="row g-5 align-items-center">
-        {/* Profile Image Column */}
-        {/* <div className="col-md-5 col-lg-4 text-center">
-          <img
-            src={profileImg}
-            alt="Profile"
-            className="img-fluid rounded-2 shadow-lg"
-            style={{
-              maxWidth: "300px",
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
-        </div> */}
+  const { ref, inView } = useInView({ threshold: 0.1 });
 
-        {/* Bio and Skills Column */}
-        <div className="col-md-8 col-lg-12">
-          <h2 className="mb-3">Hi, I'm [ Balaji S]</h2>
-          <p className="lead w-75">
-            I'm a passionate front-end developer with over 6 months of
-            experience building responsive and user-friendly web applications.
+  return (
+    <div
+      ref={ref}
+      className={`container py-2 reveal ${inView ? "in-view" : ""}`}
+    >
+      <h2 className="text-center mb-5 fw-bold">About Me</h2>
+
+      <div className="row g-5 align-items-center">
+        {/* Left side – original text */}
+        <div className="col-lg-12">
+          <p className="fs-5">
+            I am a detail-oriented front-end developer specializing in React,
+            modern JavaScript, and responsive design. My goal is to build
+            accessible, performant web applications that users love and
+            businesses rely on.
           </p>
-          <p className="w-75">
-            I specialize in React, JavaScript, and modern CSS frameworks like
-            Bootstrap. I love turning ideas into reality through clean code and
-            thoughtful design. When I'm not coding, I enjoy reading books,
-            learning new technologies, e.g., reading tech blogs, hiking, or
-            contributing to open source.
+          <p className="fs-5">
+            I enjoy collaborating with teams, converting design systems into
+            pixel-perfect implementations, and keeping code maintainable through
+            best practices. Continuous learning is core to my workflow: I follow
+            trends, contribute to open-source, and refine my skills on
+            real-world projects.
+          </p>
+          <p className="fs-5">
+            My professional experience includes delivering scalable UI
+            components, doing performance optimization, and implementing
+            cross-device compatibility while maintaining a clean and intuitive
+            user experience.
           </p>
         </div>
+
+        {/* Right side – current company info */}
       </div>
     </div>
   );

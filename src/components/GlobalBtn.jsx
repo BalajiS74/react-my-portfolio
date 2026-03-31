@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const GlobalBtn = ({ name, btnsize, isSecondStyle, href, download, target, rel, className, onClick, type="button" }) => {
+export const GlobalBtn = ({ name, btnsize, isSecondStyle, fullGreen, block, href, download, target, rel, className, onClick, type="button" }) => {
   const [hover, setHover] = useState(false);
 
   const defaultStyle = {
@@ -30,9 +30,28 @@ export const GlobalBtn = ({ name, btnsize, isSecondStyle, href, download, target
     boxShadow: "0 8px 20px rgba(16, 24, 40, 0.06)",
   };
 
-  const style = isSecondStyle
+  const baseStyle = isSecondStyle
     ? { ...secondaryStyle, ...(hover ? secondaryHoverStyle : {}) }
     : { ...defaultStyle, ...(hover ? hoverStyle : {}) };
+
+  const fullGreenStyle = {
+    backgroundColor: "#25d967",
+    color: "#ffffff",
+    border: "1px solid #25d967",
+  };
+
+  const fullGreenHoverStyle = {
+    backgroundColor: "#16a34a",
+    color: "#ffffff",
+    boxShadow: "0 8px 20px rgba(37, 217, 103, 0.22)",
+    transform: "translateY(-2px)",
+  };
+
+  const style = {
+    ...baseStyle,
+    ...(fullGreen ? (hover ? fullGreenHoverStyle : fullGreenStyle) : {}),
+    ...(block ? { width: "100%", display: "block" } : {}),
+  };
 
   return (
     <>
