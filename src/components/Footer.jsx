@@ -5,15 +5,36 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={"bg-dark text-light pt-2 pb-2 mt-auto rounded-3  "}>
+    <footer className="bg-dark text-light pt-3 pb-3 mt-auto rounded-3">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-md-6 text-center text-md-start">
+          {/* Left side: copyright */}
+          <div className="col-md-4 text-center text-md-start mb-3 mb-md-0">
             <p className="mb-0 text-white-50 small">
-              &copy; {currentYear}Balaji@dev. All rights reserved.
+              &copy; {currentYear} Balaji@dev. All rights reserved.
             </p>
           </div>
-          <div className="col-md-6 text-center text-md-end mt-3 mt-md-0">
+
+          {/* Middle: contact info */}
+          <div className="col-md-4 text-center mb-3 mb-md-0">
+            <p className="mb-0">
+              <a href="tel:+919876543210" className="text-white-50 hover-link">
+                <i className="bi bi-telephone me-2"></i> +91 7418581620
+              </a>
+            </p>
+            <p className="mb-0">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=balaji.sornavel7418@gmail.com"
+                className="text-white-50 hover-link"
+              >
+                <i className="bi bi-envelope me-2"></i>{" "}
+                balaji.sornavel7418@gmail.com
+              </a>
+            </p>
+          </div>
+
+          {/* Right side: back to top */}
+          <div className="col-md-4 text-center text-md-end">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="btn btn-outline-light btn-sm"

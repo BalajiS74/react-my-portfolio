@@ -9,7 +9,7 @@
 }
 
 .accent {
-  color: #0d9488;
+  color: rgba(37, 217, 103, 1);
   font-weight: 700;
 }
 
@@ -26,7 +26,9 @@
   border: 1px solid #d1d5db;
   border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .project-card:hover {
@@ -40,7 +42,9 @@
   overflow: hidden;
   background: linear-gradient(155deg, #ffffff 0%, #f3f8fe 100%);
   border: 1px solid rgba(15, 23, 42, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .blog-card .card-body {
@@ -77,7 +81,6 @@
   transform: translateY(-4px);
   box-shadow: 0 16px 36px rgba(15, 23, 42, 0.15);
 }
-
 
 .project-card .card-img-top,
 .responsive-image {
@@ -130,22 +133,6 @@
   transition: all 160ms ease;
 }
 
-.skill-chips {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-.skill-chips li {
-  background: rgba(37, 217, 103, 0.06);
-  color: #14532d;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
 .profile-wrap {
   position: relative;
   width: 100%;
@@ -158,9 +145,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* border-radius: 45%; */
-  /* box-shadow: 0 14px 40px rgba(2, 6, 23, 0.12); */
-  /* border: 2px solid transparent; */
   position: relative;
   z-index: 2;
 }
@@ -179,126 +163,6 @@
   }
 }
 
-.skill-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.skill-section.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.skill-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.8rem;
-  margin: 0;
-  padding: 0;
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.skill-icon-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 110px;
-  height: 110px;
-  background: #f8fafc;
-  border-radius: 18px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
-  padding: 10px;
-  text-align: center;
-  opacity: 0;
-  transform: scale(0.96) translateY(10px);
-  animation: skillCardPop 0.55s ease forwards;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.skill-icon-wrapper:hover {
-  transform: scale(1.05);
-  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.15);
-}
-
-.skill-name {
-  margin-top: 0.35rem;
-  font-size: 0.85rem;
-  color: #334155;
-  font-weight: 600;
-}
-
-@keyframes chipFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes skillCardPop {
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-/* Skills divider and list */
-.divider {
-  padding: 2.25rem 1rem;
-  border-top: 1px solid rgba(15, 23, 36, 0.06);
-  /* margin: 2rem 0; */
-}
-.divider h2 {
-  margin: 0 0 1rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #0f1724;
-}
-.divider-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem 2.5rem;
-  align-items: start;
-}
-.divider-list li {
-  position: relative;
-  padding-left: 1.6rem;
-  color: #334155;
-  font-weight: 600;
-  margin: 6px 0;
-  font-size: larger;
-}
-.divider-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #25d967;
-  font-weight: 700;
-  line-height: 1;
-  font-size: 0.95rem;
-}
-
-@media (max-width: 576px) {
-  .divider-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .divider h2 {
-    text-align: center;
-  }
-}
-
 /* Contact section styling */
 
 .contact-card h2 {
@@ -310,10 +174,8 @@
   color: #4b5563;
 }
 
-
-
 .contact-card .form-control:focus {
-  border-color: #0d9488;
+  border-color: rgba(37, 217, 103, 1);
   box-shadow: 0 0 0 0.2rem rgba(13, 148, 136, 0.2);
 }
 
@@ -329,3 +191,266 @@
   }
 }
 
+/*  */
+
+.hero-title {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  margin-bottom: 12px;
+  color: #111827;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.accent {
+  color: #0d9488;
+  font-weight: 700;
+}
+
+.hero-sublead {
+  color: #334155;
+}
+
+.project_container {
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.15);
+}
+
+.blog-card {
+  min-height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(155deg, #ffffff 0%, #f3f8fe 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.blog-card .card-body {
+  padding: 1.35rem;
+}
+
+.blog-image-wrap img {
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-image-wrap img {
+  transform: scale(1.07);
+}
+
+.blog-title {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: #0f1724;
+}
+
+.blog-description {
+  color: #475569;
+  line-height: 1.55;
+}
+
+.blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.15);
+}
+
+.project-card .card-img-top,
+.responsive-image {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    max-height: 220px;
+  }
+}
+
+.project-card .card-body {
+  padding: 1rem;
+}
+
+.project-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.project-card .card-text {
+  color: #475569;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+.hero-sublead {
+  font-size: larger;
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.btn-contact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+  transition: all 160ms ease;
+}
+
+.profile-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .profile-wrap {
+    width: 220px;
+    height: 220px;
+  }
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Contact section styling */
+
+.contact-card h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.contact-card .form-control:focus {
+  border-color: rgba(37, 217, 103, 1);
+  box-shadow: 0 0 0 0.2rem rgba(13, 148, 136, 0.2);
+}
+
+.contact-card .btn {
+  min-width: 170px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 1.2rem;
+  }
+}
+
+/* skill section  */
+/* Smooth reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill chip hover effect - LARGER */
+.skill-chip {
+  transition: all 0.3s ease !important;
+}
+
+.skill-chip:hover {
+  transform: translateY(-4px) scale(1.02);
+  background-color: rgba(37, 217, 103, 1) !important;
+  color: white !important;
+  border-color: rgba(37, 217, 103, 1) !important;
+  box-shadow: 0 12px 24px rgba(13, 148, 136, 0.25) !important;
+}
+
+/* Icon wrapper sizing - MUCH BIGGER */
+.icon-card svg {
+  width: 64px;
+  height: 64px;
+  transition: transform 0.3s ease;
+}
+
+.icon-card:hover svg {
+  transform: scale(1.15);
+}
+
+/* Section spacing - MORE BREATHING ROOM */
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .myskills-section .badge {
+    font-size: 0.85rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  .icon-card {
+    padding: 1.25rem 0.75rem !important;
+  }
+
+  .icon-card svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .skill-chip {
+    font-size: 0.9rem !important;
+    padding: 8px 20px !important;
+  }
+
+  h2.display-4 {
+    font-size: 2.5rem !important;
+  }
+
+  h3.fw-bold {
+    font-size: 2rem !important;
+  }
+}

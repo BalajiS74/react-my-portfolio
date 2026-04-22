@@ -8,6 +8,7 @@ import flipcart from "../assets/projects-image/flipcart_clone.png";
 import weatherapp from "../assets/projects-image/weathercast.png";
 import scadbus from "../assets/projects-image/scad_bus.png";
 import arangam from "../assets/projects-image/arangam.png";
+import foody from "../assets/projects-image/foody.png";
 const projectsData = [
   {
     id: 1,
@@ -64,6 +65,16 @@ const projectsData = [
     demoLink: "https://balajis74.github.io/arangam/",
     codeLink: "https://github.com/BalajiS74/arangam",
     isdiablebutton: true,
+  },
+  {
+    id: 7,
+    title: "Foody",
+    description:
+      "A simple food management web application built using react. It allows users to calculate the totak bill and finance.",
+    image: foody,
+    demoLink: "https://balajis74.github.io/foody-app/",
+    codeLink: "https://github.com/BalajiS74/foody-app",
+    isdiablebutton: false,
   },
   // Add more projects here
 ];

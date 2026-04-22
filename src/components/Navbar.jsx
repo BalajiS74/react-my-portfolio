@@ -52,7 +52,8 @@ function Navbar() {
   return (
     <div
       ref={ref}
-      className={`container-fluid navbar-container reveal ${inView ? "in-view" : ""}`}>
+      className={`container-fluid navbar-container reveal ${inView ? "in-view" : ""}`}
+    >
       <div className="row align-items-center py-md-3 pt-3">
         {/* Name */}
         <div className="col-6 col-md-3 ps-md-4 " style={{ letterSpacing: 3 }}>
@@ -73,7 +74,11 @@ function Navbar() {
         {/* Mobile Menu Button */}
         <div className="col-6 col-md-3 d-flex justify-content-end justify-content-md-center align-items-center gap-3">
           <div className="d-none d-md-flex gap-5">
-            <IconWrapper iconName="instagram" color="red" />
+            <IconWrapper
+              iconName="instagram"
+              color="red"
+              linkId="https://www.instagram.com/mr_balu_5203/"
+            />
             <IconWrapper
               iconName="github"
               color="black"

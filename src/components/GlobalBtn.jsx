@@ -1,6 +1,19 @@
 import React, { useState } from "react";
 
-export const GlobalBtn = ({ name, btnsize, isSecondStyle, fullGreen, block, href, download, target, rel, className, onClick, type="button" }) => {
+export const GlobalBtn = ({
+  name,
+  btnsize,
+  isSecondStyle,
+  fullGreen,
+  block,
+  href,
+  download,
+  target,
+  rel,
+  className,
+  onClick,
+  type = "button",
+}) => {
   const [hover, setHover] = useState(false);
 
   const defaultStyle = {
@@ -57,7 +70,7 @@ export const GlobalBtn = ({ name, btnsize, isSecondStyle, fullGreen, block, href
     <>
       {href ? (
         <a
-          href={href}
+          href="/react-my-portfolio/#contact"
           download={download}
           target={target}
           rel={rel}
