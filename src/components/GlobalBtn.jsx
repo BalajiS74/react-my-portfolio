@@ -70,7 +70,7 @@ export const GlobalBtn = ({
     <>
       {href ? (
         <a
-          href="/react-my-portfolio/#contact"
+          href={href}
           download={download}
           target={target}
           rel={rel}

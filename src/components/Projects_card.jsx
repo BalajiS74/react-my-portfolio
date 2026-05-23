@@ -12,15 +12,6 @@ import foody from "../assets/projects-image/foody.png";
 const projectsData = [
   {
     id: 1,
-    title: "Guess Game",
-    description:
-      "An interactive number guessing game built with React. Users guess a number between 1 and 100 and receive hints.",
-    image: guessgame,
-    demoLink: "https://balajis74.github.io/Guessing-Game/",
-    codeLink: "https://github.com/BalajiS74/Guessing-Game",
-  },
-  {
-    id: 2,
     title: "Learn DSA through Animation",
     description:
       "An interactive learning platform for Data Structures and Algorithms, built with React. Features visualizations and hands-on exercises.",
@@ -29,7 +20,7 @@ const projectsData = [
     codeLink: "https://github.com/BalajiS74/DSA",
   },
   {
-    id: 3,
+    id: 2,
     title: "flipcart clone",
     description:
       "A clone of the popular e-commerce website Flipkart, built with React. It features product listings, a shopping cart, and a responsive design.",
@@ -38,7 +29,7 @@ const projectsData = [
     codeLink: "https://github.com/BalajiS74/flipcart",
   },
   {
-    id: 4,
+    id: 3,
     title: "Weather App",
     description:
       "A simple weather application built with React. It fetches real-time weather data and displays it in a user-friendly interface.",
@@ -47,7 +38,7 @@ const projectsData = [
     codeLink: "https://github.com/BalajiS74/react-weather-app",
   },
   {
-    id: 5,
+    id: 4,
     title: "Scad bus",
     description:
       "A simple bus tracking application built using react native with expo . It allows users to track bus locations and schedules in real-time.",
@@ -57,7 +48,7 @@ const projectsData = [
     isdiablebutton: true,
   },
   {
-    id: 6,
+    id: 5,
     title: "Arangam",
     description:
       "A simple event management application built using react native with expo . It allows users to manage and organize events.",
@@ -67,7 +58,7 @@ const projectsData = [
     isdiablebutton: true,
   },
   {
-    id: 7,
+    id: 6,
     title: "Foody",
     description:
       "A simple food management web application built using react. It allows users to calculate the totak bill and finance.",

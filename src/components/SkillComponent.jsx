@@ -15,18 +15,13 @@ const SkillComponent = () => {
         <div className="container">
           {/* Section Header - BIGGER */}
           <div className="text-center mb-5">
-            <span
+            {/* <span
               className="badge bg-gradient px-4  mb-4 rounded-pill"
               style={{ backgroundColor: "rgba(37, 217, 103, 1)", fontSize: "1rem" }}
             >
               ⚡ Expertise
-            </span>
-            <h2
-              className="display-4 fw-bold mb-4"
-              style={{ fontSize: "3.5rem" }}
-            >
-              My Skills
-            </h2>
+            </span> */}
+            <h2 className=" fw-bold mb-4">My Skills</h2>
             <p
               className="text-secondary mx-auto"
               style={{ maxWidth: "600px", fontSize: "1.2rem" }}
@@ -36,7 +31,7 @@ const SkillComponent = () => {
           </div>
 
           {/* Skills Chips - MUCH BIGGER */}
-          <div className="d-flex flex-wrap justify-content-center gap-3">
+          <div className="d-flex flex-wrap justify-content-center gap-5">
             {[
               "making responsive website",
               "making mobile app",
@@ -47,7 +42,8 @@ const SkillComponent = () => {
               "adaptability",
               "critical thinking",
               "communication skills",
-              "data analysis",
+              "leadershiping",
+              "design thinking",
             ].map((skill, idx) => (
               <span
                 key={skill}
@@ -77,15 +73,18 @@ const SkillComponent = () => {
         <div className="container">
           {/* Section Header - BIGGER */}
           <div className="text-center mb-5">
-            <span
+            {/* <span
               className="badge  bg-gradient px-4 py-3 mb-4 rounded-pill"
-              style={{ fontSize: "1rem", backgroundColor: "rgba(37, 217, 103, 1)" }}
+              style={{
+                fontSize: "1rem",
+                backgroundColor: "rgba(37, 217, 103, 1)",
+              }}
             >
               🛠️ Tech Stack
-            </span>
-            <h3 className="fw-bold mb-4" style={{ fontSize: "3rem" }}>
+            </span> */}
+            <h2 className="fw-bold mb-4">
               Tools & Technologies
-            </h3>
+            </h2>
             <p
               className="text-secondary mx-auto"
               style={{ maxWidth: "600px", fontSize: "1.2rem" }}
@@ -99,24 +98,20 @@ const SkillComponent = () => {
             {skills.map((skill, index) => (
               <div
                 key={skill.name || index}
-                className="col-6 col-sm-4 col-md-3 col-lg-2"
+                className="col-6 col-sm-4 col-md-3 col-lg-1"
               >
                 <div
-                  className="icon-card bg-white rounded-4 shadow-sm text-center h-100 transition-all"
+                  className=" transition-all"
                   style={{
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    transition: "transform 0.3s ease 0.3s ease",
                     cursor: "pointer",
                     padding: "1.75rem 1rem",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translateY(-8px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 20px 35px rgba(0,0,0,0.15)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow =
-                      "0 1px 3px rgba(0,0,0,0.1)";
                   }}
                 >
                   <div className="mb-3">

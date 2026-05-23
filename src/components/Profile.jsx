@@ -35,7 +35,7 @@ const Profile = () => {
               <GlobalBtn
                 name="Contact Me"
                 isSecondStyle
-                href="/react-my-portfolio/contact"
+                href={"/react-my-portfolio/#contact"}
               />
             </div>
           </div>
@@ -49,7 +49,7 @@ const Profile = () => {
               className="profile-img"
             />
             <h4 className="mt-4">
-              Jr.Software Developer |{" "}
+              Jr.Production Engineer |{" "}
               <a href="https://www.iwavesystems.com/" target="_blank">
                 <span className=" text-success">iwave</span>
               </a>
