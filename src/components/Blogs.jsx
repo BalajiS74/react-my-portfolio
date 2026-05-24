@@ -13,7 +13,7 @@ export const Blogs = () => {
       ref={ref}
       className={`container py-5 reveal ${inView ? "in-view" : ""}`}
     >
-      <h2 className="text-center mb-5 fw-bold">Latest Blog Posts</h2>
+      <h2 className="text-center mb-5 fw-bold">Latest Blogs🤵‍♂️</h2>
       <div className="row g-4">
         {blogPosts.slice(0, 3).map((post, index) => (
           <div

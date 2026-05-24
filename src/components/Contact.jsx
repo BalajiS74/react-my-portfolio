@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useInView } from "../hooks/useInView";
 import { GlobalBtn } from "./GlobalBtn";
+
 export const Contact = () => {
   const { ref, inView } = useInView();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,19 +13,45 @@ export const Contact = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
+  // Handle Input Change
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
+  // Handle Form Submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would normally send the data to a backend service
-    console.log("Form data submitted:", formData);
+
+    // Get existing contacts
+    const existingContacts = JSON.parse(localStorage.getItem("contacts")) || [];
+
+    // Add new contact
+    const updatedContacts = [...existingContacts, formData];
+
+    // Store in localStorage
+    localStorage.setItem("contacts", JSON.stringify(updatedContacts));
+
+    console.log("Stored Contacts:", updatedContacts);
+
+    // Success Message
     setSubmitted(true);
-    // Optionally reset form
-    setFormData({ name: "", email: "", message: "" });
-    setTimeout(() => setSubmitted(false), 5000);
+
+    // Reset Form
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+
+    // Hide Success Alert
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 5000);
   };
 
   return (
@@ -35,19 +63,20 @@ export const Contact = () => {
         <div className="contact-card p-4">
           <div className="text-center mb-4">
             <h2 className="fw-bold">Get in Touch</h2>
+
             <p className="text-muted mb-0">
               Send me a message and I'll get back within 24 hours.
             </p>
           </div>
+
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              {" "}
               {submitted && (
                 <div
                   className="alert alert-success alert-dismissible fade show"
                   role="alert"
                 >
-                  Thank you for reaching out! I'll get back to you soon.
+                  Message sent successfully!
                   <button
                     type="button"
                     className="btn-close"
@@ -56,11 +85,14 @@ export const Contact = () => {
                   ></button>
                 </div>
               )}
+
               <form onSubmit={handleSubmit}>
+                {/* Name */}
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label fw-semibold">
                     Name
                   </label>
+
                   <input
                     type="text"
                     className="form-control"
@@ -71,10 +103,13 @@ export const Contact = () => {
                     required
                   />
                 </div>
+
+                {/* Email */}
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label fw-semibold">
-                    Email address
+                    Email Address
                   </label>
+
                   <input
                     type="email"
                     className="form-control"
@@ -85,10 +120,13 @@ export const Contact = () => {
                     required
                   />
                 </div>
+
+                {/* Message */}
                 <div className="mb-3">
                   <label htmlFor="message" className="form-label fw-semibold">
                     Message
                   </label>
+
                   <textarea
                     className="form-control"
                     id="message"
@@ -99,6 +137,8 @@ export const Contact = () => {
                     required
                   ></textarea>
                 </div>
+
+                {/* Button */}
                 <div className="text-center">
                   <GlobalBtn
                     name="Send Message"

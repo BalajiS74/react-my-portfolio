@@ -9,6 +9,10 @@ import weatherapp from "../assets/projects-image/weathercast.png";
 import scadbus from "../assets/projects-image/scad_bus.png";
 import arangam from "../assets/projects-image/arangam.png";
 import foody from "../assets/projects-image/foody.png";
+import reactnavbar from "../assets/projects-image/reactnavbar.png";
+import codingweb from "../assets/projects-image/codingweb.png";
+import HealthyKitchen from "../assets/projects-image/HealthyKitchen.png";
+import cakeweb from "../assets/projects-image/cakeweb.png";
 const projectsData = [
   {
     id: 1,
@@ -21,7 +25,7 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "flipcart clone",
+    title: "Flipcart clone",
     description:
       "A clone of the popular e-commerce website Flipkart, built with React. It features product listings, a shopping cart, and a responsive design.",
     image: flipcart, // Replace with actual import
@@ -67,6 +71,44 @@ const projectsData = [
     codeLink: "https://github.com/BalajiS74/foody-app",
     isdiablebutton: false,
   },
+  {
+    id: 7,
+    title: "React Navbar",
+    description: "A responsive navigation bar built with React and Bootstrap.",
+    image: reactnavbar,
+    demoLink: "https://balajis74.github.io/react-navbar/#/",
+    codeLink: "https://github.com/BalajiS74/react-navbar",
+    isdiablebutton: false,
+  },
+  {
+    id: 8,
+    title: "Coding Web",
+    description:
+      "Learning platform for coding , specifically for beginners and c++ learner.",
+    image: codingweb,
+    demoLink: "https://balajis74.github.io/codingweb//",
+    codeLink: "https://github.com/BalajiS74/coding-web",
+    isdiablebutton: false,
+  },
+  {
+    id: 9,
+    title: "Healthy Kitchen",
+    description: "A simple recipe management application built with React.",
+    image: HealthyKitchen,
+    demoLink: "https://balajis74.github.io/restaurant/",
+    codeLink: "https://github.com/BalajiS74/restaurant",
+    isdiablebutton: false,
+  },
+  {
+    id: 10,
+    title: "Sweet Treats",
+    description:
+      " The best cake website with simple design and user-friendly interface.",
+    image: cakeweb,
+    demoLink: " https://balajis74.github.io/cakewebsite-main/",
+    codeLink: "https://github.com/BalajiS74/cakewebsite-main",
+    isdiablebutton: false,
+  },
   // Add more projects here
 ];
 export const ProjectsCard = () => {
@@ -77,7 +119,14 @@ export const ProjectsCard = () => {
       ref={ref}
       className={`container project_container py-5 reveal ${inView ? "in-view" : ""}`}
     >
-      <h2 className="text-center mb-5 fw-bold">Show cases</h2>
+      <h2
+        className="text-center mb-5 fw-bold"
+        style={{
+          textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+        }}
+      >
+        Show cases🌸
+      </h2>
       <div className="row g-4">
         {projectsData.map((project, index) => (
           <div

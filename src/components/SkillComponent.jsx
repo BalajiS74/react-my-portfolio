@@ -15,13 +15,14 @@ const SkillComponent = () => {
         <div className="container">
           {/* Section Header - BIGGER */}
           <div className="text-center mb-5">
-            {/* <span
-              className="badge bg-gradient px-4  mb-4 rounded-pill"
-              style={{ backgroundColor: "rgba(37, 217, 103, 1)", fontSize: "1rem" }}
+            <h2
+              className=" fw-bold mb-4"
+              style={{
+                textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+              }}
             >
-              ⚡ Expertise
-            </span> */}
-            <h2 className=" fw-bold mb-4">My Skills</h2>
+              My Skills⚡
+            </h2>
             <p
               className="text-secondary mx-auto"
               style={{ maxWidth: "600px", fontSize: "1.2rem" }}
@@ -33,17 +34,17 @@ const SkillComponent = () => {
           {/* Skills Chips - MUCH BIGGER */}
           <div className="d-flex flex-wrap justify-content-center gap-5">
             {[
-              "making responsive website",
-              "making mobile app",
-              "problem solving",
-              "teamwork",
-              "time management",
-              "quick learner",
-              "adaptability",
-              "critical thinking",
-              "communication skills",
-              "leadershiping",
-              "design thinking",
+              "Making responsive website",
+              "Making mobile app",
+              "Problem solving",
+              "Teamwork",
+              "Time management",
+              "Quick learner",
+              "Adaptability",
+              "Critical thinking",
+              "Communication skills",
+              "Leadership",
+              "Design thinking",
             ].map((skill, idx) => (
               <span
                 key={skill}
@@ -73,17 +74,13 @@ const SkillComponent = () => {
         <div className="container">
           {/* Section Header - BIGGER */}
           <div className="text-center mb-5">
-            {/* <span
-              className="badge  bg-gradient px-4 py-3 mb-4 rounded-pill"
+            <h2
+              className="fw-bold mb-4"
               style={{
-                fontSize: "1rem",
-                backgroundColor: "rgba(37, 217, 103, 1)",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
               }}
             >
-              🛠️ Tech Stack
-            </span> */}
-            <h2 className="fw-bold mb-4">
-              Tools & Technologies
+              Tools & Technologies⚙️
             </h2>
             <p
               className="text-secondary mx-auto"

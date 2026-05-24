@@ -17,11 +17,11 @@ export const Footer = () => {
 
           {/* Middle: contact info */}
           <div className="col-md-4 text-center mb-3 mb-md-0">
-            <p className="mb-0">
+            {/* <p className="mb-0">
               <a href="tel:+919876543210" className="text-white-50 hover-link">
                 <i className="bi bi-telephone me-2"></i> +91 7418581620
               </a>
-            </p>
+            </p> */}
             <p className="mb-0">
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=balaji.sornavel7418@gmail.com"
